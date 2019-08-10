@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册成功回显</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td> <img th:src="@{'/upload/'+${user.headpic.originalFilename}}" src=""></td>
+                <!--<td> <img th:src="@{${user.localtion}}" src=""></td>-->
+                <td th:text="${user.username}">用户名</td>
+                <td><a th:href="@{download(filename=${user.headpic.originalFilename})}">下载头像</a></td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
